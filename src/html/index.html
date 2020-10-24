@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Buscador de series</title>
+</head>
+  <body>   
+      <main class="search">
+        <h1>Buscador de series</h1>
+        <form action="">
+          <input type="text" placeholder="Introduce serie aquí" class="js-inputSearch" value="dexter">
+          <input type="button" class="js-btnSearch" value="Search">
+        </form>
+          <!-- <button class="js-btnSearch">Search</button> -->
+       
+        <ul class="js-seriesList">
+          <!-- <li class="js-serie"></li> -->
+          <!-- <img src="" alt=""> -->
 
-  <body>
-    <div class="page">
-      <include src="./partials/header.html" title="Bienvenidos a Adalab"></include>
-      <include src="./partials/main.html"></include>
-      <include
-        src="./partials/link.html"
-        aClass="link__adalab"
-        text="Adalab"
-        url="https://adalab.es"
-      ></include>
-      <include
-        src="./partials/link.html"
-        aClass="link__github"
-        text="GitHub"
-        url="https://github.com"
-      ></include>
-      <include src="./partials/footer.html"></include>
-    </div>
-    <script src="./assets/js/main.js"></script>
+        </ul>
+      </main>  
+        <small class="favorite">
+          <h2>Mis series favoritas</h2>
+          <ul class="js-favoriteList"></ul>
+        </small>
+      
+      <script src="./assets/js/main.js"></script>
   </body>
 </html>
