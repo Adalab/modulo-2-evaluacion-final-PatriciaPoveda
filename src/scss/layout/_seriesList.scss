@@ -1,0 +1,22 @@
+.seriesList {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+.seriesList__item {
+  height: 335px;
+  width: 240px;
+  background-color: blue;
+  color: white;
+  border: black solid 1px;
+  text-align: center;
+  list-style: none;
+}
+.favoriteSearch {
+  height: 335px;
+  width: 240px;
+  background-color: aqua;
+  color: white;
+  border: black solid 1px;
+  text-align: center;
+}

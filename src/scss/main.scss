@@ -1,18 +1,11 @@
 // @import 'core/variables';
-// @import 'core/reset';
+@import "core/reset";
 // @import 'components/links';
-// @import 'layout/page';
-// @import 'layout/header';
-// @import 'layout/footer';
+@import "layout/favoriteList";
+@import "layout/seriesList";
+@import "layout/search";
 // @import 'pages/index';
 
-// body {
-//   display: flex;
-// }
-// .search {
-//   order: 1;
-//   // margin: 0px;
-// }
-// .favourite {
-//   margin: 30px;
-// }
+.search {
+  display: flex;
+}

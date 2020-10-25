@@ -1,6 +1,6 @@
 const listenFavList = function () {
-  const series = document.querySelectorAll(".js-serie");
-  for (const serie of series) {
+  const seriesPaint = document.querySelectorAll(".js-serie");
+  for (const serie of seriesPaint) {
     serie.addEventListener("click", paintFavList);
   }
 };
