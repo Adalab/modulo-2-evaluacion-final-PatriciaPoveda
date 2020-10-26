@@ -1,5 +1,4 @@
 let favoriteHtml = "";
-console.log(favorites);
 const paintFavList = function (event) {
   let click = parseInt(event.currentTarget.id);
   const clickPaint = event.currentTarget;
@@ -10,7 +9,6 @@ const paintFavList = function (event) {
       if (favorites.indexOf(click) === -1) {
         clickPaint.classList.add("favoriteSearch");
         favorites.push(click);
-
         favoriteHtml += `<li class="favoritesList__item">`;
         favoriteHtml += serie.show.name;
         if (poster !== null) {
@@ -21,10 +19,6 @@ const paintFavList = function (event) {
         }
         favoriteHtml += `</li>`;
       }
-      // else {
-      //   favorites.splice(click, 1);
-      //   favoriteHtml = "";
-      // }
     }
   }
   favoriteList.innerHTML = favoriteHtml;

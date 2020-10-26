@@ -11,5 +11,4 @@ const rePaintFavList = function () {
     favoriteHtml += `</li>`;
   }
   favoriteList.innerHTML = favoriteHtml;
-  // setLocalStorage();
 };
