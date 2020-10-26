@@ -3,7 +3,6 @@ console.log(favorites);
 const paintFavList = function (event) {
   let click = parseInt(event.currentTarget.id);
   const clickPaint = event.currentTarget;
-  console.log(favorites);
   for (const serie of series) {
     const poster = serie.show.image;
     if (click === serie.show.id) {
@@ -11,8 +10,7 @@ const paintFavList = function (event) {
       if (favorites.indexOf(click) === -1) {
         clickPaint.classList.add("favoriteSearch");
         favorites.push(click);
-        console.log(favorites);
-        rePaintFavList();
+
         favoriteHtml += `<li class="favoritesList__item">`;
         favoriteHtml += serie.show.name;
         if (poster !== null) {
