@@ -11,7 +11,7 @@ const paintFavList = function (event) {
         clickPaint.classList.add("favoriteSearch");
         favorites.push(click);
 
-        favoriteHtml += `<li class="favoritesList__item">`;
+        favoriteHtml += `<li class="favoritesList__item" id="${serie.show.id}">`;
         favoriteHtml += serie.show.name;
         if (poster !== null) {
           favoriteHtml += `<img src="${serie.show.image.medium}" alt="Poster ${serie.show.name}" class="js-poster favoritesList__item--img">`;
@@ -19,6 +19,7 @@ const paintFavList = function (event) {
           favoriteHtml += `<img src=" https://via.placeholder.com/210x295/ffffff/666666/?
         text=TV" alt="Poster de ${serie.show.name} class="js-poster favoritesList__item--img">`;
         }
+        favoriteHtml += `<i class="fa fa-times-circle" aria-hidden="true" id="${serie.show.id}"></i>`;
         favoriteHtml += `</li>`;
       }
       // else {
@@ -29,4 +30,5 @@ const paintFavList = function (event) {
   }
   favoriteList.innerHTML = favoriteHtml;
   setLocalStorage();
+  listenRemoveFavList();
 };
