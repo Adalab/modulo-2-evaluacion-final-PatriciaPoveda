@@ -1,14 +1,17 @@
 const rePaintFavList = function () {
-  for (const favorite of favorites) {
+  for (let i = 0; i < favorites.length; i++) {
     favoriteHtml += `<li class="favoritesList__item">`;
-    favoriteHtml += favorite.name;
-    if (favorite.image !== null) {
-      favoriteHtml += `<img src="${favorite.image.medium}" alt="Poster ${favorite.name}" class="js-poster favoritesList__item--img">`;
-    } else if (favorite.image === null) {
+    favoriteHtml += favorites[i].name;
+    if (favorites[i].image !== null) {
+      favoriteHtml += `<img src="${favorites[i].image.medium}" alt="Poster ${favorites[i].name}" class="js-poster favoritesList__item--img">`;
+    } else if (favorites[i].image === null) {
       favoriteHtml += `<img src=" https://via.placeholder.com/210x295/ffffff/666666/?
-      text=TV" alt="Poster de ${favorite.name} class="js-poster favoritesList__item--img">`;
+      text=TV" alt="Poster de ${favorites[i].name} class="js-poster favoritesList__item--img">`;
     }
+    favoriteHtml += `<i class="fa fa-times-circle js-fa-times-circle" aria-hidden="true" id="${i}"></i>`;
     favoriteHtml += `</li>`;
   }
   favoriteList.innerHTML = favoriteHtml;
+  setLocalStorage();
+  listenRemoveFavList();
 };
