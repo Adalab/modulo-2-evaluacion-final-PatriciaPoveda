@@ -6,7 +6,11 @@ const paintFavList = function (event) {
     const poster = serie.show.image;
     if (click === serie.show.id) {
       click = serie.show;
-      if (favorites.indexOf(click) === -1) {
+      console.log(click.name);
+      //find o findIndex
+      const favIndex = favorites.indexOf(click);
+
+      if (favIndex === -1) {
         clickPaint.classList.add("favoriteSearch");
         favorites.push(click);
         favoriteHtml += `<li class="favoritesList__item">`;
