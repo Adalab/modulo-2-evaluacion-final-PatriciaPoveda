@@ -10,5 +10,8 @@ const listenFavList = function () {
     serie.addEventListener("click", paintFavList);
   }
 };
+
+favoritesBtn.addEventListener("click", clickButtonReset);
+
 btnSearch.addEventListener("click", getSerie);
 getLocalStorage();
