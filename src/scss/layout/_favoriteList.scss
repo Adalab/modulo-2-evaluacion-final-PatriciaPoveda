@@ -1,18 +1,51 @@
 .sectionOne {
-  width: 250px;
+  width: 350px;
+  margin-left: 20px;
 }
 .favorites {
+  margin-top: 20px;
   text-align: center;
-}
-.favoritesList {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.favoritesTitle {
+  text-align: center;
+  width: 300px;
+}
+.favoritesList {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  // grid-template-rows: 200px;
   &__item {
-    margin: 10px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 5px 0 5px;
+    margin: 10px;
+    border: black solid 1px;
+    color: white;
+    font-size: 14px;
     &--img {
-      height: 140px;
-      width: 100px;
+      height: 120px;
+      width: 85px;
+      border: black solid 1px;
     }
   }
+}
+.fa-times-circle {
+  cursor: pointer;
+  padding: 5px;
+}
+.favoritesBtn {
+  width: 70px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: black solid 1px;
+  cursor: pointer;
+  margin-top: 20px;
 }

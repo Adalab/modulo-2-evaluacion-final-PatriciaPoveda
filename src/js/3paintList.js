@@ -1,16 +1,43 @@
 function paintList() {
-  let seriesHtml = "";
+  seriesList.innerHTML = "";
   for (let i = 0; i < series.length; i++) {
     const poster = series[i].show.image;
-    seriesHtml += `<li class="js-serie seriesList__item" id="${series[i].show.id}">`;
-    seriesHtml += series[i].show.name;
+    const newItem = document.createElement("li");
+    newItem.setAttribute("class", "js-serie seriesList__item");
+    newItem.setAttribute("id", `${series[i].show.id}`);
+    const newTitle = document.createElement("p");
+    newTitle.setAttribute("class", "seriesList__item--titleSerie");
+    const newTitleContent = document.createTextNode(`${series[i].show.name}`);
+    const newImg = document.createElement("img");
+    newImg.setAttribute("class", "js-poster seriesList__item--poster");
+    const newStatus = document.createElement("p");
+    newStatus.setAttribute("class", "seriesList__item--statusSerie");
+    const newStatusContent = document.createTextNode(
+      `${series[i].show.status}`
+    );
+    newTitle.appendChild(newTitleContent);
+    newItem.appendChild(newTitle);
+    newItem.appendChild(newImg);
+    newStatus.appendChild(newStatusContent);
+    newItem.appendChild(newStatus);
+    seriesList.appendChild(newItem);
     if (poster !== null) {
-      seriesHtml += `<img src="${series[i].show.image.medium}" alt="Poster ${series[i].show.name}" class="js-poster">`;
+      newImg.setAttribute("src", `${series[i].show.image.medium}`);
+      newImg.setAttribute("alt", "Poster ${series[i].show.name}");
     } else if (poster === null) {
-      seriesHtml += `<img src=" https://via.placeholder.com/210x295/ffffff/666666/?
-      text=TV" alt="Poster de ${series[i].show.name} class="js-poster">`;
+      newImg.setAttribute(
+        "src",
+        "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"
+      );
+      newImg.setAttribute("alt", "Poster no encontrado");
     }
-    seriesHtml += `</li>`;
+    for (let j = 0; j < favorites.length; j++) {
+      if (parseInt(newItem.id) === favorites[j].id) {
+        newItem.setAttribute(
+          "class",
+          "js-serie seriesList__item favoriteSearch"
+        );
+      }
+    }
   }
-  seriesList.innerHTML = seriesHtml;
 }

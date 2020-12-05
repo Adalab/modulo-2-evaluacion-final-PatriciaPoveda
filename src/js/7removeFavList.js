@@ -8,6 +8,8 @@ function removeFavList(event) {
       console.log(favIndex);
       favorites.splice(favIndex, 1);
       rePaintFavList();
+      paintList();
+      listenFavList();
     }
   }
   setLocalStorage();

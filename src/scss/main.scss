@@ -4,5 +4,14 @@
 @import "layout/search";
 
 .search {
+  background-color: rgb(77, 74, 74);
   display: flex;
+  padding: 115px 0 20px 0;
+}
+.title {
+  background-color: black;
+  text-align: center;
+  padding-top: 10px;
+  position: fixed;
+  width: 100vw;
 }
