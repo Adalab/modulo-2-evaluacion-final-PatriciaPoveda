@@ -1,4 +1,29 @@
 .seriesSearch {
-  width: 300px;
-  margin-left: 20px;
+  // padding-left: 20px;
+  display: inline;
+  &__label {
+    // margin-left: 20px;
+    font-size: 25px;
+    color: white;
+  }
+  &__input {
+    // margin-left: 20px;
+    height: 25px;
+    width: 180px;
+    font-size: 18px;
+    background-color: rgb(77, 74, 74);
+    color: white;
+    border: white solid 1px;
+    padding-left: 10px;
+    // &::placeholder {
+    //   padding-left: 10px;
+    // }
+  }
+  &__button {
+    // margin-left: 20px;
+    background-color: red;
+    width: 60px;
+    height: 25px;
+    font-weight: 600;
+  }
 }
