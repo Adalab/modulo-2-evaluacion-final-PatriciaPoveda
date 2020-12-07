@@ -1,6 +1,5 @@
 function setLocalStorage() {
   localStorage.setItem("favorites", JSON.stringify(favorites));
-  console.log(favorites);
 }
 
 function getLocalStorage() {
